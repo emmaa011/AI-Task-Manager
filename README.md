@@ -18,7 +18,7 @@ A simple command-line task manager built with Python. The project was developed 
 
 - Python 3
 - JSON
-- Python `unittest`
+- pytest
 - Command-Line Interface (CLI)
 
 ## Project Structure
@@ -39,7 +39,7 @@ AI-Task-Manager/
 
 - `main.py` — Provides the command-line interface and handles user interaction.
 - `task_manager.py` — Contains the task-management logic and JSON storage functionality.
-- `test_task_manager.py` — Contains automated tests for the Task Manager.
+- `test_task_manager.py` — Contains automated pytest tests for the Task Manager.
 - `tasks.json` — Stores tasks for persistent storage.
 - `PLAN.md` — Contains the project plan, requirements, user stories, and acceptance criteria.
 - `REFLECTION.md` — Documents the use of AI during development and lessons learned.
@@ -70,23 +70,23 @@ Choose an option by entering the corresponding number.
 
 ## Running the Tests
 
-The project uses Python's built-in `unittest` framework.
+The project uses `pytest` for automated testing.
+
+Make sure the virtual environment is activated and pytest is installed.
 
 Run the tests with:
 
 ```bash
-python -m unittest test_task_manager.py
+pytest
 ```
 
-A successful test run should display:
+A successful test run should show that all tests passed, for example:
 
 ```text
-......
-----------------------------------------------------------------------
-Ran 6 tests
-
-OK
+10 passed
 ```
+
+The tests cover task creation, input validation, completing tasks, deleting tasks, invalid task IDs, saving and loading JSON data, missing files, and corrupted JSON data.
 
 ## Data Storage
 
